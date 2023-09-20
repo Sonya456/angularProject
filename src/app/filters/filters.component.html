@@ -1,0 +1,33 @@
+<!-- <p>filters works!</p>
+<button class="btn btn-warning">click</button>
+
+<p-button label="Submit"></p-button>
+
+
+
+<div class="card flex justify-content-center">
+    <p-autoComplete [(ngModel)]="selectedItem" [suggestions]="suggestions" (completeMethod)="search($event)"></p-autoComplete>
+</div> -->
+
+<div class="card">
+    <div class="flex flex-wrap gap-3 mb-4">
+        <div class="flex-auto">
+            <label for="integer" class="font-bold block mb-2"> Code </label>
+            <input pInputText id="integer" pKeyFilter="int" class="w-full" [(ngModel)]="codeFilter"/>
+        </div>
+        <div class="flex-auto">
+            <label for="number" class="font-bold block mb-2"> Name </label>
+            <input pInputText id="number" pKeyFilter="num" class="w-full" [(ngModel)]="nameFilter"/>
+        </div>
+        <div class="flex-auto">
+            <label for="money" class="font-bold block mb-2"> Category </label>
+            <input pInputText id="money" pKeyFilter="money" class="w-full" [(ngModel)]="categoryFilter"/>
+        </div>
+        <div class="flex-auto">
+            <label for="hex" class="font-bold block mb-2"> Quantity </label>
+            <input pInputText id="hex" pKeyFilter="hex" class="w-full" [(ngModel)]="quantityFilter"/>
+        </div>
+    </div>
+
+</div>
+<p-button label="Submit" (onClick)="onFilterChange()"></p-button>
